@@ -1,0 +1,6 @@
+@shiftLoggerApi._0lcm_HostAddress = http://localhost:5055
+
+GET {{shiftLoggerApi._0lcm_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

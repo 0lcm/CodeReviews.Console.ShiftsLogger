@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shiftLogger.0lcm", "shiftLogger.0lcm\shiftLogger.0lcm.csproj", "{C133B05B-4D2F-4CBC-8E0D-01043D9257EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shiftLogger.Api.0lcm", "shiftLogger.Api.0lcm\shiftLogger.Api.0lcm.csproj", "{187E942A-C656-4268-9A39-AAC5412EF9D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shiftLogger.Shared", "shiftLogger.Shared\shiftLogger.Shared.csproj", "{DC5FBA9F-C0F2-4E8A-B061-31DD41663800}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C133B05B-4D2F-4CBC-8E0D-01043D9257EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C133B05B-4D2F-4CBC-8E0D-01043D9257EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C133B05B-4D2F-4CBC-8E0D-01043D9257EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C133B05B-4D2F-4CBC-8E0D-01043D9257EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{187E942A-C656-4268-9A39-AAC5412EF9D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{187E942A-C656-4268-9A39-AAC5412EF9D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{187E942A-C656-4268-9A39-AAC5412EF9D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{187E942A-C656-4268-9A39-AAC5412EF9D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC5FBA9F-C0F2-4E8A-B061-31DD41663800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC5FBA9F-C0F2-4E8A-B061-31DD41663800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC5FBA9F-C0F2-4E8A-B061-31DD41663800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC5FBA9F-C0F2-4E8A-B061-31DD41663800}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
