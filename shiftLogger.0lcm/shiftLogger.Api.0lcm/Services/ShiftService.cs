@@ -93,7 +93,7 @@ public class ShiftService(ApiDbContext db) : IShiftService
             .ToList();
     }
 
-    public async Task PublishNewShift(CreateShiftDto shiftDto)
+    public async Task<bool> PublishNewShift(CreateShiftDto shiftDto)
     {
         var shift = new Shift
         {
@@ -105,6 +105,8 @@ public class ShiftService(ApiDbContext db) : IShiftService
 
         db.Shifts.Add(shift);
         await db.SaveChangesAsync();
+
+        return GetShiftById(shift.ShiftId) is not null;
     }
 
     /// <summary>

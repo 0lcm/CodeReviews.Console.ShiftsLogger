@@ -10,5 +10,5 @@ public class Shift
     public bool Completed { get; set; } = false;
 
     public int? EmployeeId { get; set; } = null;
-    public Employee? Employee { get; set; } = null;
+                                                       public Employee? Employee { get; set; } = null;
 }

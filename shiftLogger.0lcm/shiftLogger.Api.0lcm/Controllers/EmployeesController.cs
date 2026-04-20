@@ -34,10 +34,14 @@ public class EmployeesController(IEmployeeService employeeService) : ControllerB
     }
 
     [HttpPost]
-    public IActionResult AddEmployee(CreateEmployeeDto employeeDto)
+    public async Task<IActionResult> AddEmployee(CreateEmployeeDto employeeDto)
     {
-        employeeService.AddEmployee(employeeDto);
-        return Created();
+        var success = await employeeService.AddEmployee(employeeDto);
+        return success switch
+        {
+            true => Created(),
+            false => StatusCode(StatusCodes.Status500InternalServerError)
+        };
     }
 
     [HttpPut("{id:int}")]

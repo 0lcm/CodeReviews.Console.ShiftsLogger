@@ -48,10 +48,14 @@ public class ShiftsController(IShiftService shiftService) : ControllerBase
     }
 
     [HttpPost]
-    public IActionResult PublishNewShift(CreateShiftDto createShiftDto)
+    public async Task<IActionResult> PublishNewShift(CreateShiftDto createShiftDto)
     {
-        shiftService.PublishNewShift(createShiftDto);
-        return Created();
+        var success = await shiftService.PublishNewShift(createShiftDto);
+        return success switch
+        {
+            true => Created(),
+            false => StatusCode(StatusCodes.Status500InternalServerError)
+        };
     }
 
     [HttpPut("assign-shift/shift{shiftId:int}/employee{employeeId:int}")]

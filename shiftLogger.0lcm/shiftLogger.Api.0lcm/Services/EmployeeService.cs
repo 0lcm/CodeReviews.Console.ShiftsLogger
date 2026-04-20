@@ -49,7 +49,7 @@ public class EmployeeService(ApiDbContext db) : IEmployeeService
             .ToList();
     }
 
-    public async Task AddEmployee(CreateEmployeeDto createEmployeeDto)
+    public async Task<bool> AddEmployee(CreateEmployeeDto createEmployeeDto)
     {
         var employee = new Employee
         {
@@ -57,6 +57,8 @@ public class EmployeeService(ApiDbContext db) : IEmployeeService
         };
         db.Employees.Add(employee);
         await db.SaveChangesAsync();
+
+        return GetEmployeeById(employee.EmployeeId) is not null;
     }
 
     public async Task EditEmployee(int employeeId, CreateEmployeeDto employeeDto)
